@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pods.SalesController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="54.0" style="-fx-background-color: #7DF9FF; -fx-opacity: 0.5;" />
+      <AnchorPane layoutX="54.0" layoutY="56.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="744.0" prefWidth="108.0" style="-fx-background-color: #00FFFF;">
+         <children>
+            <Button layoutX="-51.0" layoutY="249.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleReturnProduct" prefHeight="56.0" prefWidth="158.0" style="-fx-background-color: #191970; -fx-border-color: #E6BD37; -fx-border-width: 2px;" text="Return Product" textFill="WHITE" />
+            <Button layoutX="-51.0" layoutY="61.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleAddMaintenance" prefHeight="56.0" prefWidth="158.0" style="-fx-background-color: #191970; -fx-border-color: #E6BD37; -fx-border-width: 2px;" text="Add Maintenance" textFill="WHITE" />
+            <Button layoutX="-51.0" layoutY="503.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleToatalDaySales" prefHeight="56.0" prefWidth="158.0" style="-fx-background-color: #191970; -fx-border-color: #E6BD37; -fx-border-width: 2px;" text="Total Day Sales" textFill="WHITE" />
+            <Button layoutX="-51.0" layoutY="568.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleTotalMonthSales" prefHeight="56.0" prefWidth="158.0" style="-fx-background-color: #191970; -fx-border-color: #E6BD37; -fx-border-width: 2px;" text="Total month Sales" textFill="WHITE" />
+            <Button layoutX="-51.0" layoutY="633.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleTotalYearSales" prefHeight="56.0" prefWidth="158.0" style="-fx-background-color: #191970; -fx-border-color: #E6BD37; -fx-border-width: 2px;" text="Total annual Sales" textFill="WHITE" />
+            <Button layoutX="-51.0" layoutY="314.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSalesSearchByName" prefHeight="56.0" prefWidth="158.0" style="-fx-background-color: #191970; -fx-border-color: #E6BD37; -fx-border-width: 2px;" text="Search By Name" textFill="WHITE" />
+            <Button layoutX="-51.0" layoutY="376.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSalesSearchByDate" prefHeight="56.0" prefWidth="158.0" style="-fx-background-color: #191970; -fx-border-color: #E6BD37; -fx-border-width: 2px;" text="Search By Date" textFill="WHITE" />
+            <Button layoutX="-51.0" layoutY="439.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handlesTotalSalesByDate" prefHeight="56.0" prefWidth="158.0" style="-fx-background-color: #191970; -fx-border-color: #E6BD37; -fx-border-width: 2px;" text="total Search by Date" textFill="WHITE" />
+            <Button layoutX="-51.0" layoutY="186.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#HandleDeletProductFromSales" prefHeight="56.0" prefWidth="158.0" style="-fx-background-color: #191970; -fx-border-color: #E6BD37; -fx-border-width: 2px;" text="Delete Item" textFill="WHITE" />
+            <Button layoutX="-51.0" layoutY="124.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleAddExpinxes" prefHeight="56.0" prefWidth="158.0" style="-fx-background-color: #191970; -fx-border-color: #E6BD37; -fx-border-width: 2px;" text="Add Expinces" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="54.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="56.0" prefWidth="746.0" style="-fx-background-color: #7393B3;">
+         <children>
+            <HBox alignment="CENTER" layoutY="-3.0" prefHeight="56.0" prefWidth="944.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-198.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="56.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../WhatsApp%20Image%202023-07-18%20at%209.01.33%20PM.jpeg" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" onAction="#handleProductsTable" prefHeight="56.0" prefWidth="440.0" style="-fx-background-color: #191970; -fx-border-color: #E6BD37; -fx-border-width: 2px;" text="Products" textFill="WHITE" />
+                  <Button mnemonicParsing="false" onAction="#handleSalesTable" prefHeight="55.0" prefWidth="440.0" style="-fx-background-color: #191970; -fx-border-color: #E6BD37; -fx-border-width: 2px;" text="sales" textFill="WHITE" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="162.0" layoutY="56.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="744.0" prefWidth="838.0">
+         <children>
+            <TextField fx:id="QuantityField" layoutX="460.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="167.0" promptText="Enter product quantity" />
+            <TextField fx:id="PriceField" layoutX="297.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="158.0" promptText="Enter product price" />
+            <TextField fx:id="NameField" layoutX="14.0" layoutY="13.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="146.0" promptText="Enter product name" />
+            <TextField fx:id="totalSalesField" layoutX="21.0" layoutY="70.0" prefHeight="26.0" prefWidth="536.0" promptText="Enter the date like 2012-12-25 or the name of the month or the year for annual" />
+            <Label fx:id="SalesId" layoutX="14.0" layoutY="39.0" prefHeight="26.0" prefWidth="724.0" text="Total Sales">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <TextField fx:id="PriceSoldField" layoutX="167.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="122.0" promptText="Enter Price Sold" />
+            <TextField fx:id="StartDateField" layoutX="570.0" layoutY="70.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="80.0" promptText="Start Date" />
+            <TextField fx:id="EndDateField" layoutX="657.0" layoutY="70.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="80.0" promptText="End Date" />
+            <TableView fx:id="productTable" layoutY="101.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="642.0" prefWidth="838.0">
+               <columns>
+                  <TableColumn fx:id="idColumn" prefWidth="83.99996948242188" text="Id" />
+                  <TableColumn fx:id="nameColumn" prefWidth="180.0000762939453" text="Name" />
+                  <TableColumn fx:id="priceColumn" prefWidth="163.99993896484375" text="Price" />
+                  <TableColumn fx:id="PriceSoldColumn" prefWidth="136.79998779296875" text="price sold" />
+                  <TableColumn fx:id="QuantitySoldColumn" maxWidth="329.5999755859375" minWidth="0.0" prefWidth="124.79998779296875" text="Quantity Sold" />
+                  <TableColumn fx:id="SalesTimeColumn" prefWidth="149.5999755859375" text="sale Time" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

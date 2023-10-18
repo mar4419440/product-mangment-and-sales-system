@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pods.MainViewController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="54.0" style="-fx-background-color: #7DF9FF; -fx-opacity: 0.5;" />
+      <AnchorPane layoutX="54.0" layoutY="56.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="744.0" prefWidth="108.0" style="-fx-background-color: #00FFFF;">
+         <children>
+            <Button layoutX="-51.0" layoutY="125.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#HandleEditeProductName" prefHeight="56.0" prefWidth="158.0" style="-fx-background-color: #191970; -fx-border-color: #E6BD37; -fx-border-width: 2px;" text="Edit product Name" textFill="WHITE" />
+            <Button layoutX="-51.0" layoutY="61.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#HandleNewProduct" prefHeight="56.0" prefWidth="158.0" style="-fx-background-color: #191970; -fx-border-color: #E6BD37; -fx-border-width: 2px;" text="New Product" textFill="WHITE" />
+            <Button layoutX="-51.0" layoutY="191.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#HandleEditeProductprice" prefHeight="56.0" prefWidth="158.0" style="-fx-background-color: #191970; -fx-border-color: #E6BD37; -fx-border-width: 2px;" text="Edit Product Price" textFill="WHITE" />
+            <Button layoutX="-51.0" layoutY="256.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#HandleDeleteProductName" prefHeight="56.0" prefWidth="158.0" style="-fx-background-color: #191970; -fx-border-color: #E6BD37; -fx-border-width: 2px;" text="Delete product" textFill="WHITE" />
+            <Button layoutX="-51.0" layoutY="321.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#HandleDeleteProductprice" prefHeight="56.0" prefWidth="158.0" style="-fx-background-color: #191970; -fx-border-color: #E6BD37; -fx-border-width: 2px;" text="Delete Product Price" textFill="WHITE" />
+            <Button layoutX="-51.0" layoutY="387.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#HandleSellProduct" prefHeight="56.0" prefWidth="158.0" style="-fx-background-color: #191970; -fx-border-color: #E6BD37; -fx-border-width: 2px;" text="Sell product" textFill="WHITE" />
+            <Button layoutX="-51.0" layoutY="455.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#HandlegetProductByName" prefHeight="56.0" prefWidth="158.0" style="-fx-background-color: #191970; -fx-border-color: #E6BD37; -fx-border-width: 2px;" text="Get product by name" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="54.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="56.0" prefWidth="746.0" style="-fx-background-color: #7393B3;">
+         <children>
+            <HBox alignment="CENTER" layoutY="-3.0" prefHeight="56.0" prefWidth="946.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-200.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="56.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../WhatsApp%20Image%202023-07-18%20at%209.01.33%20PM.jpeg" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" onAction="#HandleProductTable" prefHeight="56.0" prefWidth="440.0" style="-fx-background-color: #191970; -fx-border-color: #E6BD37; -fx-border-width: 2px;" text="Products" textFill="WHITE" />
+                  <Button mnemonicParsing="false" onAction="#handleSalesTable" prefHeight="55.0" prefWidth="440.0" style="-fx-background-color: #191970; -fx-border-color: #E6BD37; -fx-border-width: 2px;" text="sales" textFill="WHITE" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="162.0" layoutY="56.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="744.0" prefWidth="838.0">
+         <children>
+            <TextField fx:id="QuantityField" layoutX="487.0" layoutY="39.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="144.0" promptText="Enter product quantity" />
+            <TextField fx:id="PriceField" layoutX="331.0" layoutY="39.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="144.0" promptText="Enter product price" />
+            <TextField fx:id="NameField" layoutX="145.0" layoutY="39.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="173.0" promptText="Enter product name" />
+            <TextField fx:id="IdField" layoutY="39.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="136.0" promptText="Enter Id" />
+            <TextField fx:id="QuantitySoldField" layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="219.0" promptText="Enter product quantity sold" />
+            <TableView fx:id="productTable" layoutY="75.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="667.0" prefWidth="838.0">
+               <columns>
+                  <TableColumn fx:id="idColumn" prefWidth="99.20001220703125" text="Id" />
+                  <TableColumn fx:id="nameColumn" prefWidth="240.80001831054688" text="Name" />
+                  <TableColumn fx:id="priceColumn" prefWidth="211.20004272460938" text="Price" />
+                  <TableColumn fx:id="quantityColumn" prefWidth="283.20001220703125" text="Quantity" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="PriceSoldField" layoutX="800.0" layoutY="95.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="144.0" promptText="Enter Price Sold" />
+   </children>
+</AnchorPane>
